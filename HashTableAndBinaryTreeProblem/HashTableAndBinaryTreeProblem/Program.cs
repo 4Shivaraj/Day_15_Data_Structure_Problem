@@ -10,9 +10,9 @@ namespace DataStructure
             ///<summary>
             ///UC1:Find the frequency of word in sentence
             /// </summary>
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Welcome to Data Structure Problem Using Generics");
             LinkedHashMap<string, int> LinkedHashMap = new LinkedHashMap<string, int>(5);  ///1 Creating Linklist Hashmap 
-            string sentence = "to to be or not to be";                                        ///2
+            string sentence = "to be or not to be";                                        ///2
             string[] words = sentence.ToLower().Split(" ");                                ///3 Created the array and Splitting The Sentances, 
             foreach (string word in words)                                                 ///4 To Take Every Word In That Sentaces
             {
@@ -32,3 +32,13 @@ namespace DataStructure
         }
     }
 }
+
+//UC_1
+//Ability to find frequency of words in a sentence like “To be or not to be”
+
+//- Use LinkedList to do the Hash Table Operation
+//- To do this we create MyMapNode with Key Value Pair and create LinkedList of MyMapNode
+
+//Result
+//Welcome to Data Structure Problem Using Generics
+//2
