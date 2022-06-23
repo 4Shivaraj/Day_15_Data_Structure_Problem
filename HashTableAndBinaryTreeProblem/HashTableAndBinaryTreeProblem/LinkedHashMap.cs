@@ -64,7 +64,21 @@ namespace DataStructure
             }                                                           //6.19 in Linked List class checking node is present or not
             else myMapNode.value = value;
         }
-
-
+        public void Remove(K key)
+        {
+            //Find the index for the word
+            int index = GetBucketIndex(key);
+            LinkedList<K, V> myLinkedList = BucketList[index];
+            //Check its linked list at the posititon
+            if (myLinkedList != null)
+            {
+                //Check mymapNode in corrosponding linked list
+                MyMapNode<K, V> myMapNode = myLinkedList.Search(key);
+                if (myMapNode != null)
+                {
+                    myLinkedList.DeleteNode(myMapNode);
+                }
+            }
+        }
     }
 }
