@@ -7,7 +7,7 @@ namespace DataStructure
     {
         static void Main(string[] args)
         {
-            ///<summary>
+            ///<summary
             ///UC1:Find the frequency of word in sentence
             /// </summary>
             Console.WriteLine("Welcome to Data Structure Problem Using Generics");
@@ -27,18 +27,38 @@ namespace DataStructure
             int frequency = LinkedHashMap.Get("to");
             Console.WriteLine(frequency);
 
+            ///UC_2:Find the frequency of word in paragraph
+            string Paragraph = "“Paranoids are not paranoid because they are " +
+                "paranoid but because they keep putting themselves deliberately into" +
+                " paranoid avoidable situations";
+            string[] letters = Paragraph.ToLower().Split(" ");
 
-
+            foreach (string word in letters)
+            {
+                int value = LinkedHashMap.Get(word);
+                if (value == default)
+                {
+                    value = 1;
+                }
+                else value += 1;
+                LinkedHashMap.Add(word, value);
+            }
+            int frequency1 = LinkedHashMap.Get("paranoid");
+            Console.WriteLine(frequency1);
         }
     }
 }
 
-//UC_1
-//Ability to find frequency of words in a sentence like “To be or not to be”
-
+//UC_2
+//Ability to find frequency of words in a large
+//paragraph phrase “Paranoids are not paranoid because they are paranoid but
+//because they keep putting themselves deliberately into paranoid avoidable situations”
+//- Use hashcode to find index of the words in the para
+//- Create LinkedList for each index and store the words and its frequency
 //- Use LinkedList to do the Hash Table Operation
-//- To do this we create MyMapNode with Key Value Pair and create LinkedList of MyMapNode
+//- To do this create MyMapNode with Key Value Pair and create LinkedList of MyMapNode
 
 //Result
 //Welcome to Data Structure Problem Using Generics
 //2
+//3
